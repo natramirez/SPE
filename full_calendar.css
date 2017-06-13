@@ -1,0 +1,237 @@
+* {box-sizing: border-box;}
+
+/* contains entire calendar: header and table */
+#calendar-container{
+    width: 100%;
+    margin: 0 auto;
+    float: right;
+    font-size: 16px;
+    font-family: Georgia, sans-serif;
+}
+
+/*All views: DAY, WEEK, MONTH*/
+
+#calendar-header {
+    padding: 24px;
+    background-color: #581845;
+}
+
+#calendar-header ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#calendar-header ul li {
+    font-size: 20px;
+    font-family: Verdana;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+/*DAY VIEW ONLY*/
+#calendar-header ul li#date-line {
+    text-align: center;
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    z-index: 1;
+}
+
+#calendar-header .prev:hover {
+    color: #D5B2C1;
+    text-shadow: 2px 2px 8px #3A061D;
+}
+
+#calendar-header .next:hover {
+    color: #D5B2C1;
+    text-shadow: 2px 2px 8px #3A061D;
+}
+
+#calendar-header .prev {
+    float: left;
+    font-size: 40px;
+    padding-top: 2px;
+    padding-left: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#calendar-header .next {
+    float: right;
+    font-size: 40px;
+    padding-top: 2px;
+    padding-right: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #f4f7f9;
+}
+
+tr:last-child > td {
+    border-bottom: none;
+}
+
+/*WEEK VIEW ONLY*/
+.weekdays {
+    padding: 0;
+}
+
+/*MONTH VIEW ONLY*/
+.monthWeekdays {
+    background-color: #900C3F;
+    font-family: Geneva, sans-serif;
+    font-size: 85%;
+    text-align: center;
+    color: #E3D4D2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+/*MONTH VIEW ONLY*/
+.monthDays {
+    text-align: left;
+    width: 100px;
+    height: 110px;
+    border: 1px solid #C4BABC;
+    color: #7D7A7C;
+    border-left: none;
+    border-top: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.prevMonthDays, .nextMonthDays {
+    color: lightgrey;
+}
+
+.monthDivBox {
+    padding-left: 7px;
+    padding-bottom: 3px;
+    overflow: hidden;
+    float: left;
+}
+
+
+/*DAY VIEW ONLY*/
+.currentday {
+    padding: 0;
+}
+
+/*DAY AND WEEK VIEW*/
+.divBox {
+    background-color: #900C3F;
+    font-family: Geneva, sans-serif;
+    font-size: 85%;
+    text-align: center;
+    margin: 0;
+    color: #E3D4D2;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    /*position: relative;*/
+}
+
+/*MONTH VIEW*/
+.monthDivBox {
+    padding-left: 7px;
+    padding-bottom: 3px;
+    overflow: hidden;
+    float: left;
+}
+
+/*ALL VIEWS*/
+.rightCol {
+    border-right: none;
+}
+
+/*DAY AND WEEK VIEW*/
+.divBoxCont {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 510px;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid #C4BABC;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+/*ALL VIEWS*/
+.eventButtons {
+    height: 30px;
+    overflow: hidden;
+    border: none;
+    background-color: #C52052;
+    color: white;
+    width: 100%;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+/*DAY AND WEEK VIEW*/
+.eventCount {
+    /*top:0;*/
+    float: right;
+    font-size: 13px;
+    padding-right: 10px;
+    color: #7D7A7C;
+    /*position: absolute;*/
+}
+
+/*MONTH VIEW ONLY*/
+.monthEventCount {
+    float: right;
+    padding-right: 5px;
+    font-size: 13px;
+    color: #b5b9ba;
+}
+
+/*MONTH VIEW ONLY*/
+.eventsBox {
+    margin: 0;
+    width: 100%;
+    height: 70%;
+    overflow-y:scroll;
+}
+
+/*DAY AND WEEK VIEW*/
+.todayWeekday {
+    background-color: #DDB3BC;
+}
+
+/*WEEK VIEW ONLY*/
+.weekdays.selected .divBox{
+    background-color: #C52052;
+}
+/*WEEK VIEW ONLY*/
+.weekdays.selected .divBoxCont {
+    background-color: #EEDEE5;
+}
+
+/*MONTH VIEW ONLY*/
+.monthDays.selected {
+    background-color: #EEDEE5;
+}
+/*MONTH VIEW ONLY*/
+.todayBox {
+    background-color: #DDB3BC;
+}
+/*MONTH VIEW ONLY*/
+.todayBox:hover .monthEventCount {
+  color: #b5b9ba;
+}
+/*MONTH VIEW ONLY*/
+.todayBox.selected {
+    background-color: #EEDEE5;
+}
